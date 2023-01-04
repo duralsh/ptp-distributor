@@ -11,7 +11,7 @@ interface PTP {
 }
 
 
-contract Distrubitor is Ownable{
+contract Distributor is Ownable{
     mapping(address => uint256) public withdrawn;
     mapping(address => uint256) public allocations;
     uint256 totalPTPWithdrawn;
