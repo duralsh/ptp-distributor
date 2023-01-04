@@ -19,13 +19,13 @@ contract Distributor is Ownable{
 
     error Unauthorized();
 
-    constructor()
+    constructor(address[5] memory _beneficiaries)
     {
-        allocations[0xcf3Ac866f1e9344C814A1d4b06C5B5bfB5fABBf6] = 36363;
-        allocations[0xbFD6eB8953d8158b465A631A925DbA0a3936E06f] = 36363;
-        allocations[0xc135009C21291D72564737f276F41EE653F5c7C0] = 5456;
-        allocations[0xD4dBa96a17a289D197A0Ef86A508984B8BB69Eb4] = 10909;
-        allocations[0x758908eE6D6a42Be4ce44Ee24579f1A9d8b3481e] = 10909;
+        allocations[_beneficiaries[0]] = 36363;
+        allocations[_beneficiaries[1]] = 36363;
+        allocations[_beneficiaries[2]] = 10909;
+        allocations[_beneficiaries[3]] = 10909;
+        allocations[_beneficiaries[4]] = 5456;
     }
 
     function changeBeneficiary (address _newBeneficiary) external {

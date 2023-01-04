@@ -6,9 +6,9 @@ import "../src/PtpDistributor.sol";
 
 contract DistributorTest is Test {
     PTP public PTPContract = PTP(0x22d4002028f537599bE9f666d1c4Fa138522f9c8);
-    Distributor PTP_DISTRIBUTOR = new Distributor();
     uint256 initialBalance = 3330000 ether;
-    address[5] beneficiaries = [0xcf3Ac866f1e9344C814A1d4b06C5B5bfB5fABBf6,0xbFD6eB8953d8158b465A631A925DbA0a3936E06f, 0xc135009C21291D72564737f276F41EE653F5c7C0, 0xD4dBa96a17a289D197A0Ef86A508984B8BB69Eb4 , 0x758908eE6D6a42Be4ce44Ee24579f1A9d8b3481e] ;
+    address[5] beneficiaries = [0xcf3Ac866f1e9344C814A1d4b06C5B5bfB5fABBf6, 0xbFD6eB8953d8158b465A631A925DbA0a3936E06f, 0x758908eE6D6a42Be4ce44Ee24579f1A9d8b3481e, 0xD4dBa96a17a289D197A0Ef86A508984B8BB69Eb4 , 0xc135009C21291D72564737f276F41EE653F5c7C0] ;
+    Distributor PTP_DISTRIBUTOR = new Distributor(beneficiaries);
  
     function setUp() public {
        
